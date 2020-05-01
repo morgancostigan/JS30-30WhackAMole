@@ -58,6 +58,9 @@
     const hole = randomHole(holes);
     // console.log({time, hole});
     hole.classList.add('up');
+    setTimeout(() => {
+      hole.classList.remove('up');
+    }, time);
     
   }//end molePop function
 
