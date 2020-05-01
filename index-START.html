@@ -45,6 +45,10 @@
   function randomHole(holes) {
     const idx = Math.floor(Math.random() * holes.length);
     const hole = holes[idx];
+    if (hole === lastHole) {
+      // console.log('nah brah');
+      randomHole(holes); //rerun function if hole chosen is the last hole chosen
+    }
     console.log(hole);
     
     lastHole = hole; 
