@@ -57,7 +57,7 @@
   }//end randomHole function
 
   function molePop() {
-    const time = randomTime(200, 1000);
+    const time = randomTime(300, 1500);
     const hole = randomHole(holes);
     // console.log({time, hole});
     hole.classList.add('up');
@@ -74,7 +74,7 @@
     molePop(); //starts them moles a-poppin'
     setTimeout(() => {
       timeUp = true;
-    }, 10000); //end timer at 10000ms, or 10 seconds
+    }, 15000); //end timer at 15000ms, or 15 seconds
   }//end startGame function 
 
   function bonk(e) {
@@ -83,7 +83,6 @@
     score++; //adds one to score on each mole click 
     this.classList.remove('up'); //knocks down bonked moles
     scoreBoard.textContent = score; //display the score
-    
   }//end bonk function
 
   moles.forEach(mole => mole.addEventListener('click', bonk));
