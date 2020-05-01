@@ -47,12 +47,18 @@
     const hole = holes[idx];
     if (hole === lastHole) {
       // console.log('nah brah');
-      randomHole(holes); //rerun function if hole chosen is the last hole chosen
-    }
-    console.log(hole);
-    
+      return randomHole(holes); //rerun function if hole chosen is the last hole chosen
+    }// end IF
     lastHole = hole; 
+    return hole;
   }//end randomHole function
+
+  function molePop() {
+    const time = randomTime(200, 1000);
+    const hole = randomHole(holes);
+    console.log({time, hole});
+    
+  }//end molePop function
 
 
 </script>
