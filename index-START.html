@@ -61,10 +61,18 @@
     hole.classList.add('up');
     setTimeout(() => {
       hole.classList.remove('up');
-      if (!timeUp) molePop();
-    }, time);
-    
+      if (!timeUp) molePop();//ends game when timeUp is true
+    }, time);//end setTimeout
   }//end molePop function
+
+  function startGame() {
+    scoreBoard.textContent = 0; //reset score
+    timeUp = false; //resets timer
+    molePop(); //starts them moles a-poppin'
+    setTimeout(() => {
+      timeUp = true;
+    }, 10000); //end timer at 10000ms, or 10 seconds
+  }//end startGame function 
 
 
 </script>
